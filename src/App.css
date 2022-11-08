@@ -7,7 +7,7 @@
   font-family: 'Lato', sans-serif;
 }
 
-.home, .all-plants, .water-level, .light-meter {
+.home, .plants, .water-level, .light-meter {
   display: flex;
   height: 90vh;
   align-items: center;

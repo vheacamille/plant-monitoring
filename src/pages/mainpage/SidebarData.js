@@ -11,8 +11,8 @@ export const SidebarData = [
       cName: 'nav-text'
     },
     {
-        title: 'All Plants',
-        path: '/allPlants',
+        title: 'Plants',
+        path: '/plants',
         icon: <GiIcons.GiPlantSeed />,
         cName: 'nav-text'
       },
