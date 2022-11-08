@@ -1,10 +1,10 @@
 const WelcomeText = () => {
     return(
-        <div class ="card bg-light mb-3" style="max-width: 18rem;"> 
-            <div class= "card-header"> <h2 classname = "centered">Welcome to BINHI</h2></div>
-            <div class= "card-body">
-                <h5 class= "card-title">About Us</h5>
-                <p class = "card-text">BINHI is a simple Plant Monitoring that aims to monitor polants soil moisture and water leve</p>
+        <div className ="card bg-light mb-3" style={{maxWidth: '18rem'}}> 
+            <div className= "card-header"> <h2 className = "centered">Welcome to BINHI</h2></div>
+            <div className= "card-body">
+                <h5 className= "card-title">About Us</h5>
+                <p className = "card-text">BINHI is a simple Plant Monitoring that aims to monitor polants soil moisture and water leve</p>
             </div>
         </div>
 

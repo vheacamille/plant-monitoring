@@ -1,19 +1,22 @@
 import './App.css';
-import{BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 import HomePage from './pages/HomePage';
-import AllPlants from './components/AllPlants/AllPlants';
-import Navbar from './pages/mainpage/Navbar';
+import AllPlants from './pages/AllPlants';
+import WaterLevel from './pages/WaterLevel'
+import LightMeter from './pages/LightMeter';
 
 function App() {
   return (
     <Router>
+      {/* <AllPlants /> */}
       <HomePage/>
   
       <Routes>
         <Route exact path='/' />
-
+        <Route exact path='/allPlants' element={<AllPlants />} />
+        <Route exact path='waterLevel' element={<WaterLevel />} />
+        <Route exact path='/lightMeter' element={<LightMeter />} />
       </Routes>
     </Router>
   );
