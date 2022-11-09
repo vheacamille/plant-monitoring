@@ -4,18 +4,18 @@ import firebaseDb from '../components/Database/firebaseDbConfig';
 
 const WaterLevel = () => {
 
-    const [waterLevel, setWaterLevel] = useState('0');
+    const [waterLevel, setWaterLevel] = useState('NA');
     
     useEffect(() => {
-        const getWaterLevel = () => {
+        const getWaterLevel = async () => {
             const db = getDatabase(firebaseDb);
-            const waterLevelRef = ref(db, '/WaterLevel/WATER_LEVEL');
+            const waterLevelRef = await ref(db, '/WaterLevel/WATER_LEVEL');
             onValue(waterLevelRef, (snapshot) => {
                 if(snapshot.exists()) {
-                    setWaterLevel(snapshot.val());
+                    setWaterLevel(JSON.stringify(snapshot.val()));
                 }
                 else {
-                    setWaterLevel(0);
+                    setWaterLevel('0');
                 }
             })
         }
@@ -27,7 +27,7 @@ const WaterLevel = () => {
     
     return (
         <div className='water-level'>
-            <h1>Water Level: {waterLevel}</h1>
+            { waterLevel !== 'NA' && (<h1>Water Level: {waterLevel}</h1>) }
         </div>
     )
 }
