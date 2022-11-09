@@ -1,17 +1,17 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import * as FaIcons from 'react-icons/fa'
-import * as AiIcons from 'react-icons/ai'
-import { SidebarData } from './SidebarData'
-import './Navbar.css'
-import { IconContext } from 'react-icons'
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import * as FaIcons from 'react-icons/fa';
+import * as AiIcons from 'react-icons/ai';
+import { SidebarData } from './SidebarData';
+import './Navbar.css';
+import { IconContext } from 'react-icons';
 // import WelcomeText from './WelcomeText'
 
 
 const Navbar = () => {
-    const [sidebar, setSidebar] = useState(false)
+    const [sidebar, setSidebar] = useState(false);
 
-    const showSidebar = () => {setSidebar(!sidebar);console.log('click')};
+    const showSidebar = () => setSidebar(!sidebar);
 
     return (
         <>
