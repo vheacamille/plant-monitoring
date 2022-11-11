@@ -7,22 +7,35 @@ const WaterLevel = () => {
 
     const [waterLevel, setWaterLevel] = useState('0');
     
+    // From public db
     useEffect(() => {
         const getWaterLevel = async () => {
-            const db = getDatabase(firebaseDb);
-            const waterLevelRef = await ref(db, '/WaterLevel/WATER_LEVEL');
-            onValue(waterLevelRef, (snapshot) => {
-                if(snapshot.exists()) {
-                    setWaterLevel(JSON.stringify(snapshot.val()));
-                }
-                else {
-                    setWaterLevel('0');
-                }
-            })
+            // VCV: Temporary since no water level yet in db
+            const dbResponse = await fetch('https://binhi-data-default-rtdb.asia-southeast1.firebasedatabase.app/FirebaseIOT/humidity.json');
+            const waterLevelValue = await dbResponse.json();
+
+            setWaterLevel(waterLevelValue);
         }
 
         getWaterLevel();
     }, [])
+
+    // useEffect(() => {
+    //     const getWaterLevel = async () => {
+    //         const db = getDatabase(firebaseDb);
+    //         const waterLevelRef = await ref(db, '/WaterLevel/WATER_LEVEL');
+    //         onValue(waterLevelRef, (snapshot) => {
+    //             if(snapshot.exists()) {
+    //                 setWaterLevel(JSON.stringify(snapshot.val()));
+    //             }
+    //             else {
+    //                 setWaterLevel('0');
+    //             }
+    //         })
+    //     }
+
+    //     getWaterLevel();
+    // }, [])
 
     return (
         <div className='water-level'>
@@ -51,9 +64,9 @@ const WaterLevel = () => {
 }
 
 const stops = [
-    <stop key={1} stopColor="someColor1" offset="5%" />,
-    <stop key={2} stopColor="someColor2" offset="50%" />,
-    <stop key={3} stopColor="someColor3" offset="85%" />,
+    <stop key={1} stopColor="#728FCE" offset="5%" />,
+    <stop key={2} stopColor="#2B65EC" offset="50%" />,
+    <stop key={3} stopColor="#659EC7" offset="85%" />,
   ];
 
 export default WaterLevel
