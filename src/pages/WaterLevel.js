@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import { getDatabase, ref, onValue } from "firebase/database";
-import LiquidChart from 'react-liquidchart';
-import firebaseDb from '../components/Database/firebaseDbConfig';
+import LiquidChart from "react-liquidchart";
+import firebaseDb from "../components/Database/firebaseDbConfig";
 
 const WaterLevel = () => {
 
@@ -11,7 +11,7 @@ const WaterLevel = () => {
     useEffect(() => {
         const getWaterLevel = async () => {
             // VCV: Temporary since no water level yet in db
-            const dbResponse = await fetch('https://binhi-data-default-rtdb.asia-southeast1.firebasedatabase.app/FirebaseIOT/humidity.json');
+            const dbResponse = await fetch("https://binhi-data-default-rtdb.asia-southeast1.firebasedatabase.app/FirebaseIOT/humidity.json");
             const waterLevelValue = await dbResponse.json();
 
             setWaterLevel(waterLevelValue);
@@ -38,7 +38,7 @@ const WaterLevel = () => {
     // }, [])
 
     return (
-        <div className='water-level'>
+        <div className="water-level">
             <LiquidChart
                 responsive
                 legend="Water"
