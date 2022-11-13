@@ -40,23 +40,28 @@ const LightMeter = () => {
     var data = parseFloat(lightMeter) < 15 ? parseFloat(15) : lightMeter;
 
     return (
-        <div key={lightMeter} className="light-meter">
-            <LightThick
-                data={data}
-                topEndDataLimit={114}
-                animate={true}
-                neon={""}
-                fillColor={"yellow"}
-                backFillColor={"lightgrey"}
-                valueColor={"white"}
-                labelColor={"black"}
-                cardColor={"white"}
-                dotColor={"black"}
-                hover={false}
-                gaugeSize={"large"}
-                labelText={parseFloat(lightMeter) + "%"}
-            />
-        </div>
+        <>
+            <div className="page-name">
+                <h2>Light Meter</h2>
+            </div>
+            <div key={lightMeter} className="light-meter">
+                <LightThick
+                    data={data}
+                    topEndDataLimit={114}
+                    animate={true}
+                    neon={""}
+                    fillColor={"yellow"}
+                    backFillColor={"lightgrey"}
+                    valueColor={"#F4F3F3"}
+                    labelColor={"black"}
+                    cardColor={"#F4F3F3"}
+                    dotColor={"black"}
+                    hover={false}
+                    gaugeSize={"medium"}
+                    labelText={parseFloat(lightMeter) + "%"}
+                />
+            </div>
+        </>
     )
 }
 

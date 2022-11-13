@@ -7,6 +7,15 @@
   font-family: 'Lato', sans-serif;
 }
 
+#root {
+  background-color:#F4F3F3;
+}
+
+.page-name {
+  text-align: center;
+  padding-top: 8vh;
+}
+
 .home, .plants, .water-level, .light-meter {
   display: flex;
   height: 90vh;
