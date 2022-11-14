@@ -1,11 +1,12 @@
-import WelcomeText from "./mainpage/WelcomeText";
+import WelcomeText from "../components/AllPlants/WelcomeText";
 import Navbar from "./mainpage/Navbar";
 
 const HomePage = () => {
     return(
         <div>
             <Navbar/>
-            {/* <WelcomeText/> */}
+            <WelcomeText/>
+           
 
 
     

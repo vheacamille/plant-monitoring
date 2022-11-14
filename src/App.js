@@ -9,7 +9,7 @@ import LightMeter from "./pages/LightMeter";
 function App() {
   return (
     <Router>
-      {/* <AllPlants /> */}
+     
       <HomePage/>
   
       <Routes>
