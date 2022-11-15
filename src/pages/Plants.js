@@ -1,13 +1,18 @@
-import AllPlants from "../components/AllPlants/AllPlants"
+import PlantsCards from "../components/AllPlants/Plants/PlantsCards"
+import WrapperP from "../components/AllPlants/WrapperP";
 
 
 const Plants = () => {
     return (
-        <div className='plants'>
+        <WrapperP>
             <h1>Plants Page</h1>
-            <AllPlants/>
-           
-        </div>
+           <PlantsCards/>
+    
+
+        </WrapperP>
+       
+            
+        
     )
 }
 

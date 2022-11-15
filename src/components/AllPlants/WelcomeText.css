@@ -1,0 +1,39 @@
+.h4{
+    font-family:Lucida Handwriting;
+    font-size: 2rem;
+    color: white;
+    font-family:Lucida Handwriting;
+    
+
+}
+.card{
+   
+    font-family:Lucida Handwriting;
+    font-size: x-large;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    padding: 0 10%;
+    justify-content: space-between;
+    align-items: center;
+    background: #c101fb;
+    font-family:monospace;
+    color: #13ed5c;
+   
+}
+.card-header{
+    font-size: x-large;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    padding: 0 10%;
+    justify-content: space-between;
+    align-items: center;
+    background: #c101fb;
+    font-family:Lucida Handwriting;
+    color: #13ed5c;
+}
+.h4{
+    font-family:Lucida Handwriting;
+    color: #13ed5c;
+}
