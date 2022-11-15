@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 
 import './PlantsCards.css';
@@ -13,7 +14,7 @@ const PlantsCard = props =>{
             <div className="card-body text-dark">
                 <h4 className="card-title">{props.title}</h4>
                 <p className="card-text text-secondary">{props.description}</p>
-                <a href="#" className= "btn btn-outline-success">View Plant</a>
+                <Link to="/plantCondition" state={{plantName: props.title}} className= "btn btn-outline-success">View Plant</Link>
             </div>
 
             </div>

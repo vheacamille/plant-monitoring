@@ -12,7 +12,7 @@ class PlantsCards extends Component {
     
     render(){
         return(
-            <div cclassName="container-fluid d-flex justify-content-center">
+            <div className="container-fluid d-flex justify-content-center">
                 <div className="row">
                     <div className = "col-md-4"> <PlantsCard imgsrc={Sili} title ="Sili" description ="Siling labuyo is a small chili pepper cultivar that developed in the Philippines after the Columbian Exchange. It belongs to the species Capsicum frutescens and is characterized by triangular fruits which grow pointing upwards. The fruits and leaves are used in traditional Philippine cuisine."/></div>
                     <div className = "col-md-4"> <PlantsCard imgsrc={Talong} title ="Talong" description= "Eggplant, aubergine or brinjal is a plant species in the nightshade family Solanaceae. Solanum melongena is grown worldwide for its edible fruit. Most commonly purple, the spongy, absorbent fruit is used in several cuisines. Typically used as a vegetable in cooking, it is a berry by botanical definition."/></div>

@@ -37,7 +37,7 @@ const LightMeter = () => {
     // }, [])4
 
     // Data value was modified for display purposes only.
-    var data = parseFloat(lightMeter) < 15 ? parseFloat(15) : lightMeter;
+    let data = parseFloat(lightMeter) < 15 ? parseFloat(15) : lightMeter;
 
     return (
         <>
