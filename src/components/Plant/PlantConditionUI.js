@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { HumidityDropPercent, TempLines, BasicCircle } from 'react-sensor-meters';
 
-import '../AllPlants/Plants/PlantsCards.css';
+import './PlantCondition.css';
 
 const PlantConditionUI = ({condition, value, title, description}) => {
     return (

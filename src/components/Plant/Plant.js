@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import PlantConditionUI from './PlantConditionUI';
-import '../AllPlants/Plants/PlantsCards.css';
+import './PlantCondition.css';
 
 const Plant = ({plantName}) => {
     const [humidity, setHumidity] = useState('0');
