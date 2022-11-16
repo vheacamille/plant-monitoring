@@ -2,7 +2,10 @@ body{
     background:radial-gradient(#e5e5e5, #ffff, #e5e5e5);
 }
 .card{
-    width:10rem;
+    width:5rem;
+    padding-top: 3rem;
+    margin-left:inherit;
+    margin-right: inherit;
 }
 .card:hover{
     box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253)!important;
@@ -14,8 +17,8 @@ card-body{
 }
 
 .padding-0{
-    padding-right: 5px;
-    padding-left: 5px;
+    padding-right: 3px;
+    padding-left: 3px;
 }
 
 card-text{
@@ -26,6 +29,9 @@ card-text{
 
 .container-fluid .row{
     padding-top: 100rem;
+   
+    
+
 }
 .overflow{
     overflow:hidden;

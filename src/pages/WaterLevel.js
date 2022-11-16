@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { getDatabase, ref, onValue } from "firebase/database";
 import LiquidChart from "react-liquidchart";
 import firebaseDb from "../components/Database/firebaseDbConfig";
+import WrapperP from "../components/AllPlants/WrapperP";
 
 const WaterLevel = () => {
 
@@ -38,7 +39,7 @@ const WaterLevel = () => {
     // }, [])
 
     return (
-        <>
+        <WrapperP>
             <div className="page-name">
                 <h2>Water Level</h2>
             </div>
@@ -64,7 +65,7 @@ const WaterLevel = () => {
                     }}
                 />
             </div>
-        </>
+        </WrapperP>
     )
 }
 

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { LightThick } from "react-sensor-meters";
 import { getDatabase, ref, onValue } from "firebase/database";
 import firebaseDb from '../components/Database/firebaseDbConfig';
+import WrapperP from "../components/AllPlants/WrapperP";
 
 const LightMeter = () => {
     const [lightMeter, setLightMeter] = useState("0");
@@ -40,7 +41,7 @@ const LightMeter = () => {
     let data = parseFloat(lightMeter) < 15 ? parseFloat(15) : lightMeter;
 
     return (
-        <>
+        <WrapperP>
             <div className="page-name">
                 <h2>Light Meter</h2>
             </div>
@@ -61,7 +62,7 @@ const LightMeter = () => {
                     labelText={parseFloat(lightMeter) + "%"}
                 />
             </div>
-        </>
+        </WrapperP>
     )
 }
 
